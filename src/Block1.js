@@ -1,12 +1,11 @@
 import React from 'react';
-import './Block.css';
-import Ball from './Ball';
 
-function Block1({ animationStarted, ballAnimationStarted }) {
+import './Block.css';
+
+function Block1() {
   return (
-    <div className={`block1 ${animationStarted ? 'animated' : ''}`}>
-      Block 1
-      {ballAnimationStarted && <Ball/>}
+    <div className={`block1 animated`}>
+      1
     </div>
   );
 }

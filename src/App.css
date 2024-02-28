@@ -1,18 +1,9 @@
 .app {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: 100vh;
   margin-bottom: 50px;
-}
-
-.animationContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 300px;
-  width: 80%;
 }
 
 .startButton {
@@ -25,4 +16,7 @@
   cursor: pointer;
   font-size: 20px;
   margin-bottom: 50px;
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 100px);
 }

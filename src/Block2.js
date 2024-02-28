@@ -1,10 +1,11 @@
 import React from 'react';
+
 import './Block.css';
 
-function Block2({ animationStarted }) {
+function Block2() {
   return (
     <div className="block2">
-      Block 2
+      2
     </div>
   );
 }

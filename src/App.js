@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import Block1 from './Block1';
 import Block2 from './Block2';
+import Ball from './Ball';
 
 import './App.css';
 
@@ -11,7 +12,7 @@ function App() {
 
   useEffect(() => {
     let intervalId;
-    
+
     if (ballAnimationStarted && animationTime < 5) {
       intervalId = setInterval(() => {
         setAnimationTime(prevTime => prevTime + 1);
@@ -33,10 +34,9 @@ function App() {
 
   return (
     <div className="app">
-      <div className="animationContainer">
-        <Block1 animationStarted={true} ballAnimationStarted={ballAnimationStarted} />
-        <Block2 />
-      </div>
+      {ballAnimationStarted && <Ball/>}
+      <Block1 />
+      <Block2 />
       <button onClick={startAnimation} disabled={ballAnimationStarted} className='startButton'>
         {ballAnimationStarted ? `${animationTime}` : 'START'}
       </button>
