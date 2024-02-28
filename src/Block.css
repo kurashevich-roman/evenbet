@@ -1,0 +1,27 @@
+.block1,
+.block2 {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 20px;
+  background: rgb(12, 136, 230);
+}
+.block2 {
+  z-index: 1;
+}
+.animated {
+  animation: moveUpDown 5s infinite alternate;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
